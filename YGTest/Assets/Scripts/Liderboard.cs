@@ -8,7 +8,7 @@ public class Liderboard : MonoBehaviour {
     {
         if (!File.Exists(Application.persistentDataPath + "/Liderboard.txt"))
         {
-            File.Create(Application.persistentDataPath + "/Liderboard.txt");
+            File.Create(Application.persistentDataPath + "/Liderboard.txt").Close();
             File.WriteAllText(Application.persistentDataPath + "/Liderboard.txt", JsonUtility.ToJson(new Liders()));
         }
         return (JsonUtility.FromJson<Liders>(File.ReadAllText(Application.persistentDataPath + "/Liderboard.txt"))).lider;
