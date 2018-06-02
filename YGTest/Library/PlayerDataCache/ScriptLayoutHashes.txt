@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/Джерико/YGTest/YGTest/build.apk
+C:/Users/Джерико/Desktop/build.apk
 SceneListBegin?
 Assets/Scenes/SampleScene.unity
 SceneListEnd?

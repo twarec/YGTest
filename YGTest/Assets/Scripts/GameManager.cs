@@ -63,6 +63,7 @@ public class GameManager : MonoBehaviour {
 
     private void Awake()
     {
+        points = 0;
         gameManager = this;
     }
 
