@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 [RequireComponent(typeof(Text))]
 public class PointsText : MonoBehaviour {
@@ -16,5 +17,6 @@ public class PointsText : MonoBehaviour {
     private void UpdateText(int v)
     {
         text.text = v.ToString();
+        transform.DOScale(1.25f, .125f).SetLoops(2, LoopType.Yoyo);
     }
 }

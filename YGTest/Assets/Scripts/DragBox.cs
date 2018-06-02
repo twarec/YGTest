@@ -30,7 +30,8 @@ public class DragBox : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerCli
                         .OnKill(() =>
                         {
                             Destroy(gameObject);
-                        }).SetEase(Ease.Linear);
+                            transform.parent.GetComponent<ParticleSystem>().Emit(Random.Range(25, 50));
+                        }).SetEase(Ease.InCirc);
                     });
             }
     }

@@ -53,11 +53,12 @@ public class ColorRandom : MonoBehaviour {
             }
         }
     }
-    public void BoxColorRandomizer(SpriteRenderer spriteRenderer)
+    public Color BoxColorRandomizer(SpriteRenderer spriteRenderer)
     {
+        var color = new Color();
         while (true)
         {
-            var color = colors[Random.Range(0, colors.Length)];
+            color = colors[Random.Range(0, colors.Length)];
             bool ActiveColor = true;
             for (int j = 0; j < boxeSpawners.Length; j++)
             {
@@ -73,6 +74,7 @@ public class ColorRandom : MonoBehaviour {
                 break;
             }
         }
+        return color;
     }
     public void LoadColor()
     {
