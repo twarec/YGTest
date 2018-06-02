@@ -4,8 +4,7 @@ using DG.Tweening;
 public class AudioManager : MonoBehaviour {
     private static AudioManager audioManager;
     private AudioSource audioSource;
-    [Range(0,1)]
-    public float FXVolume;
+
 
     #region AudioBackground
     [SerializeField]
@@ -48,7 +47,10 @@ public class AudioManager : MonoBehaviour {
     }
 
 
-
+    [SerializeField]
+    private AudioSource FXAudioSource;
+    [Range(0, 1)]
+    public float FXVolume;
     [SerializeField]
     private AudioClip
         DestroySquare,
@@ -58,19 +60,23 @@ public class AudioManager : MonoBehaviour {
     #region Other metods
     public static void PlayDestroySquare()
     {
-        audioManager.audioSource.PlayOneShot(audioManager.DestroySquare, audioManager.FXVolume);
+        if (audioManager)
+            audioManager.FXAudioSource.PlayOneShot(audioManager.DestroySquare, audioManager.FXVolume);
     }
     public static void PlayCreateSquare()
     {
-        audioManager.audioSource.PlayOneShot(audioManager.CreateSquare, audioManager.FXVolume);
+        if (audioManager)
+            audioManager.FXAudioSource.PlayOneShot(audioManager.CreateSquare, audioManager.FXVolume);
     }
     public static void PlayLowTimeTick()
     {
-        audioManager.audioSource.PlayOneShot(audioManager.LowTimeTick, audioManager.FXVolume);
+        if (audioManager)
+            audioManager.FXAudioSource.PlayOneShot(audioManager.LowTimeTick, audioManager.FXVolume);
     }
     public static void PlayUpdateColorCircle()
     {
-        audioManager.audioSource.PlayOneShot(audioManager.UpdateColorCircle, audioManager.FXVolume);
+        if (audioManager)
+            audioManager.FXAudioSource.PlayOneShot(audioManager.UpdateColorCircle, audioManager.FXVolume);
     }
     #endregion
 }
