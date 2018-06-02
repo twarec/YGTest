@@ -37,7 +37,8 @@ public class DragBox : MonoBehaviour, IDragHandler, IEndDragHandler, IPointerCli
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        transform.position = startPos;
+        if(!transform.parent.CompareTag("Circle"))
+            transform.DOMove(startPos, .25f).SetEase(Ease.Linear);
     }
 
     public void OnPointerClick(PointerEventData eventData)
