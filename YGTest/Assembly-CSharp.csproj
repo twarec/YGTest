@@ -61,12 +61,13 @@
   <ItemGroup>
     <Compile Include="Assets\Demigiant\DOTween\Examples\Basics.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Examples\Sequences.cs" />
+    <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
     <Compile Include="Assets\Scripts\BoxSpawner.cs" />
-    <Compile Include="Assets\Scripts\Cnvas\BestScores.cs" />
-    <Compile Include="Assets\Scripts\Cnvas\LoadLiderBoard.cs" />
-    <Compile Include="Assets\Scripts\Cnvas\PointsText.cs" />
-    <Compile Include="Assets\Scripts\Cnvas\Restart.cs" />
-    <Compile Include="Assets\Scripts\Cnvas\TimeGameFill.cs" />
+    <Compile Include="Assets\Scripts\Canvas\BestScores.cs" />
+    <Compile Include="Assets\Scripts\Canvas\LoadLiderBoard.cs" />
+    <Compile Include="Assets\Scripts\Canvas\PointsText.cs" />
+    <Compile Include="Assets\Scripts\Canvas\Restart.cs" />
+    <Compile Include="Assets\Scripts\Canvas\TimeGameFill.cs" />
     <Compile Include="Assets\Scripts\ColorRandom.cs" />
     <Compile Include="Assets\Scripts\DestroyAction.cs" />
     <Compile Include="Assets\Scripts\DragBox.cs" />

@@ -26,10 +26,12 @@ public class BoxSpawner : MonoBehaviour {
         {
             DragBox = null;
             GameManager.Point++;
+            AudioManager.PlayDestroySquare();
         };
         DragBox = dbi;
         ColorRandom.colorRandom.BoxColorRandomizer(dbi.GetComponent<SpriteRenderer>());
         dbi.transform.localScale = Vector3.zero;
         dbi.transform.DOScale(Vector3.one, .25f);
+        AudioManager.PlayCreateSquare();
     }
 }

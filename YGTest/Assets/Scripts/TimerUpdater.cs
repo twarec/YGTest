@@ -24,6 +24,7 @@ public class TimerUpdater : MonoBehaviour {
         {
             NowTimer = 0;
             Timer = Random.Range(MinTimer, MaxTimer);
+            AudioManager.PlayUpdateColorCircle();
             UpdateTimer.Invoke();
         }
     }

@@ -20,7 +20,10 @@ public class TimeGameFill : MonoBehaviour {
         image.fillAmount = v;
         image.color = new Color(1, v, 0);
         if (Time < 25 && Time != System.Int32.Parse(text.text))
+        {
             text.transform.DOScale(1.25f, .125f).SetLoops(2, LoopType.Yoyo);
+            AudioManager.PlayLowTimeTick();
+        }
         text.text = ((Time / 60 > 0) ? (Time / 60).ToString() + ':' : "") + (Time % 60).ToString();  
     }
 }
